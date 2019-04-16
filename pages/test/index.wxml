@@ -1,0 +1,22 @@
+<view class="warper container">
+    <view wx:for="{{itemList}}" wx:key="{{index}}" wx:if="{{item.index==1}}" catchtap="handerClick" data-item="{{item}}">
+        {{item.text}}{{index}}
+    </view>
+    <view wx:el >
+        <view wx:for="{{itemList}}" wx:key="{{index}}" wx:el catchtap="handerClick" data-item="{{item}}">
+            {{item.text}}{{index}}-=-=-==--
+        </view>
+    </view>
+    <button
+        type="default"
+        size="{{defaultSize}}"
+        loading="{{loading}}"
+        plain="{{plain}}"
+        disabled="{{disabled}}"
+        bindtap="default"
+        hover-class="other-button-hover"
+    >
+        default
+    </button>
+    <button open-type="openSetting">打开授权设置页</button>
+</view>

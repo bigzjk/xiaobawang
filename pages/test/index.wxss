@@ -1,0 +1,15 @@
+/* pages/test/index.wxss */
+.warper{
+    width: 100%;
+}
+.warper view{
+    width: 100%;
+    background: yellowgreen;
+    margin-bottom: 10px;
+}
+.button-hover {
+  background-color: red;
+}
+.other-button-hover {
+  background-color: blue;
+}

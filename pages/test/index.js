@@ -10,7 +10,7 @@ const pageObject = {
         isShow: false,
         itemList: [{
             index: 0,
-            text: '德玛西亚'
+            text: '德玛西亚pppp'
         }, {
             index: 1,
             text: '诺克萨斯'

@@ -1,0 +1,11 @@
+{
+  "name": "xiaobawang",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:bigzjk/xiaobawang.git",
+  "author": "bigzjk@163.com",
+  "license": "MIT",
+  "dependencies": {
+    "@vant/weapp": "^1.0.6"
+  }
+}

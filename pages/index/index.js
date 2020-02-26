@@ -9,34 +9,44 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    tabbarList: [
-      {
-        tabIndex: 0,
-        name: '首页',
-        url: '../index/index',
-        icon: 'home-o'
-      },
-      {
-        tabIndex: 1,
-        name: '搜索',
-        url: '../search/index',
-        icon: 'search'
-      },
-      {
-        tabIndex: 2,
-        name: '我的',
-        url: '../center/index',
-        icon: 'manager-o'
-      },
-    ]
+    itemList: [{
+        index: 0,
+        text: '德玛西亚pppp'
+    }, {
+        index: 1,
+        text: '诺克萨斯'
+    }, {
+        index: 2,
+        text: '黑色玫瑰'
+    }, {
+        index: 3,
+        text: '艾欧尼亚'
+    }, {
+        index: 4,
+        text: '守望之海'
+    }, {
+        index: 5,
+        text: '均衡教派'
+    }],
+  },
+  onShow(){
+    if (typeof this.getTabBar === 'function' &&
+        this.getTabBar()) {
+        this.getTabBar().setData({
+          selected: 0
+        })
+      }
   },
   onChange: function(e){
-    console.log(e);
     const { tabbarList } = this.data
-    wx.navigateTo({
+    console.log('e.detail', e.detail, tabbarList[e.detail].url);
+    this.setData({
+      active: e.detail
+    })
+    wx.reLaunch({
       url: tabbarList[e.detail].url,
       success: ()=>{
-        // console.log('跳转成功');
+        console.log('跳转成功');
       }
     })
   },

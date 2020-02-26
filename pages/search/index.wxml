@@ -1,2 +1,6 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        search
+    </view>
+</view>
